@@ -1,0 +1,8 @@
+<img [src]="product.Image" alt="NoImg" srcset="">
+<p>Name : {{product.name}}</p>
+<p>Price : {{'$'+product.price}}</p>
+<p>Color : {{product.color}}</p>
+<p>Discounted Price : ${{getDiscountedPrice().toFixed(2)}}</p>
+<p>{{product.inStock > 0 ? "Only " + product.inStock + " Left":"Not in Stoack"}}</p>
+<button [disabled]="!(product.inStock > 0)">Buy now</button>
+<input type="text" bind-value="name">
